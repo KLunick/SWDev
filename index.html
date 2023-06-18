@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소프트웨어개발실습1 - 5조</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+      <h1><a class="logo" href="./index.html">2023년 동서대 신입생을 위한 대학 생활 가이드</a></h1>
+    </header>
+  
+    <nav>
+      <ul class="menu">
+        <li><a href="#campus-map">캠퍼스 맵</a></li>
+        <li><a href="#library">도서관</a></li>
+        <li><a href="#academic-calendar">학사 일정</a></li>
+        <li><a href="#facility">교내 주요 시설</a></li>
+      </ul>
+    </nav>
+  
+    <main>
+    <section id="campus-map">
+        <h2>캠퍼스 맵</h2>
+        <img src="campus-map.jpg" alt="캠퍼스 맵">
+        <p>캠퍼스 내 주요 시설과 건물들의 위치를 확인하세요.</p>
+    </section>
+  
+    <section id="library">
+        <h2>민석도서관</h2>
+        <p>도서관 운영 시간과 서비스에 대한 정보를 제공합니다.</p>
+        <ul>
+            <li>도서관 위치 및 시간</li>
+        </ul>
+        <table>
+            <tr>
+                <th scope="col">장소</td>
+                <th scope="col">시간</td>
+                <th scope="col">위치</td>
+                <th scope="col">비고</td>
+            </tr>
+            <tr>
+                <td>자료실</td>
+                <td>09:00 ~ 21:00</td>
+                <td>지상 2층 ~ 3층</td>
+                <td>토,일,공휴일 휴관</td>
+            </tr>
+            <tr>
+                <td>자유열람실</td>
+                <td>07:00 ~ 24:00</td>
+                <td>지상 1층 ~ 3층</td>
+                <td>토,일,공휴일</td>
+            </tr>
+            <tr>
+                <td>디자인 도서관</td>
+                <td>09:00 ~ 18:00</td>
+                <td>International College 빌딩 3층</td>
+                <td>토,일,공휴일휴관</td>
+            </tr>
+            <tr>
+                <td>경영관 열람실</td>
+                <td>06:00 ~ 24:00</td>
+                <td>경영관 6층</td>
+                <td>토,일,공휴일</td>
+            </tr>
+        </table>
+    </section>
+  
+    <section id="academic-calendar">
+        <h2>캠퍼스 일정</h2>
+        <div>
+            <div>
+                <div> <!-- 학기 -->
+                    <nav>
+                        <ul class="seasonmenu menu">
+                            <li><a href="#academic-calendar" onclick="toggleContent('season01')">1학기</a></li>
+                            <li><a href="#academic-calendar" onclick="toggleContent('season02')">하계 계절학기</a></li>
+                            <li><a href="#academic-calendar" onclick="toggleContent('season03')">2학기</a></li>
+                            <li><a href="#academic-calendar" onclick="toggleContent('season04')">동계 계절학기</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div> <!-- 월 -->
+                    <nav id="season01" class="hide">
+                        <ul class="calendarmenu menu">
+                            <li><a href="#academic-calendar" onclick="showCalendar(3,2023)">3월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(4,2023)">4월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(5,2023)">5월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(6,2023)">6월</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="season02" class="hide">
+                        <ul class="calendarmenu menu">
+                            <li><a href="#academic-calendar" onclick="showCalendar(6,2023)">6월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(7,2023)">7월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(8,2023)">8월</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="season03" class="hide">
+                        <ul class="calendarmenu menu">
+                            <li><a href="#academic-calendar" onclick="showCalendar(9,2023)">9월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(10,2023)">10월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(11,2023)">11월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(12,2023)">12월</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="season04" class="hide">
+                        <ul class="calendarmenu menu">
+                            <li><a href="#academic-calendar" onclick="showCalendar(12,2023)">12월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(1,2024)">1월</a></li>
+                            <li><a href="#academic-calendar" onclick="showCalendar(2,2024)">2월</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="calendar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facility">
+        <h2>교내 주요 시설</h2>
+        <div>
+            <nav>
+                <ul class="facilitymenu menu">
+                    <li><a href="#facility" onclick="toggleContent_2('facility01')">식당</a></li>
+                    <li><a href="#facility" onclick="toggleContent_2('facility02')">매점</a></li>
+                    <li><a href="#facility" onclick="toggleContent_2('facility03')">카페</a></li>
+                    <li><a href="#facility" onclick="toggleContent_2('facility04')">복지시설</a></li>
+                    <li><a href="#facility" onclick="toggleContent_2('facility05')">공연장</a></li>
+                    <li><a href="#facility" onclick="toggleContent_2('facility06')">기타</a></li>
+                </ul>
+            </nav>
+            <div id="facility01" class="hide_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>이름</td>
+                            <td>위치</td>
+                            <td>연락처</td>
+                            <td>시간</td>
+                            <td>비고</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>경영관 식당</td>
+                            <td>경영관 1층</td>
+                            <td>051-312-3033</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>NM관 교직원 식당</td>
+                            <td>NM관 15층</td>
+                            <td>051-320-1990</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>글로벌빌리지 학생식당</td>
+                            <td>글로벌빌리지 4층</td>
+                            <td>051-316-7621</td>
+                            <td>11:00 ~ 14:00</td>
+                            <td>조식 - 07:30 ~ 09:00<br>
+                                석식 - 17:30 ~ 19:30
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="facility02" class="hide_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>이름</td>
+                            <td>위치</td>
+                            <td>연락처</td>
+                            <td>시간</td>
+                            <td>비고</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>모닝글로리</td>
+                            <td>스튜던트플라자 2층</td>
+                            <td>051-317-9058</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>북카페 (서점&문구)</td>
+                            <td>스튜던트플라자 3층</td>
+                            <td>051-317-9058</td>
+                            <td>09:00 ~ 18:00</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="facility03" class="hide_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>이름</td>
+                            <td>위치</td>
+                            <td>연락처</td>
+                            <td>시간</td>
+                            <td>비고</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Buzz Cafe</td>
+                            <td>전자정보관 1층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cafe Meal</td>
+                            <td>글로벌빌리지 7층</td>
+                            <td>051-321-1337</td>
+                            <td>08:30 ~ 22:00</td>
+                            <td>샌드위치 / 복사</td>
+                        </tr>
+                        <tr>
+                            <td>Plaza Cafe</td>
+                            <td>스튜던트플라자 3층</td>
+                            <td></td>
+                            <td>08:30 ~ 18:30</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Herrys Cafe</td>
+                            <td>스튜던트플라자 1층</td>
+                            <td>051-316-3690</td>
+                            <td>08:30 ~ 19:30</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Evergreen Cafe</td>
+                            <td>디자인홀 1층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Japanese Cafe</td>
+                            <td>국제협력관 3층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Chinese Cafe</td>
+                            <td>국제관 1층</td>
+                            <td>051-311-8489</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="facility04" class="hide_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>이름</td>
+                            <td>위치</td>
+                            <td>연락처</td>
+                            <td>시간</td>
+                            <td>비고</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>여학생 휴게실</td>
+                            <td>스튜던트플라자 3층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>체육관</td>
+                            <td>민석스포츠센터</td>
+                            <td>051-320-1882</td>
+                            <td></td>
+                            <td>
+                                051-320-1882<br>
+                                051-320-2099
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>종합운동장</td>
+                            <td>스튜던트플라자 옥상</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>글로벌스포츠센터(실내수영장)</td>
+                            <td>글로벌빌리지</td>
+                            <td>051-320-2180</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>보건실</td>
+                            <td>스튜던트플라자 3층</td>
+                            <td>051-320-2966</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>대학여행사</td>
+                            <td>산학협력관</td>
+                            <td>051-320-2149</td>
+                            <td></td>
+                            <td>
+                                051-320-2149<br>
+                                051-311-8200
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>농협 은행</td>
+                            <td>국제생활관II 1층</td>
+                            <td>051-320-2148</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>우체국</td>
+                            <td>경남정보대 학생회관 1층</td>
+                            <td>051-317-4192</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="facility05" class="hide_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>이름</td>
+                            <td>위치</td>
+                            <td>연락처</td>
+                            <td>시간</td>
+                            <td>비고</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>소향아트홀</td>
+                            <td>뉴밀레니엄관 2층</td>
+                            <td>051-320-2165</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>국제생활관I 소극장</td>
+                            <td>국제생활관I 1층</td>
+                            <td>051-320-2169</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>콘서트홀</td>
+                            <td>문화센터 지하1층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>야외공연장</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>소향갤러리</td>
+                            <td>문화센터 1층</td>
+                            <td>051-320-2180</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="facility06" class="hide_2">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>이름</td>
+                            <td>위치</td>
+                            <td>연락처</td>
+                            <td>시간</td>
+                            <td>비고</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>국제협력관 자동증명발급기</td>
+                            <td>국제협력관 1층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>뉴밀레니엄관 자동증명발급기</td>
+                            <td>뉴밀레니엄관 4층</td>
+                            <td></td>
+                            <td></td>
+                            <td>뉴밀레니엄관 ATM</td>
+                        </tr>
+                        <tr>
+                            <td>글로벌빌리지 ATM</td>
+                            <td>글로벌빌리지 4층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>민석도서관 물품보관실</td>
+                            <td>민석도서관 1층 자유열람실 부근</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>민석도서관 복사실</td>
+                            <td>민석도서관 1층</td>
+                            <td></td>
+                            <td>07:30 ~ 21:00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cafe Meal 복사실</td>
+                            <td>글로벌빌리지 7층 Cafe Meal 안</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>스튜던트플라자 복사실</td>
+                            <td>스튜던트플라자 3층</td>
+                            <td>051-320-2156</td>
+                            <td>09:00 ~ 19:00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>스튜던트플라자 출력서비스</td>
+                            <td>스튜던트플라자 3층</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>글로벌하우스 사감실(서관)</td>
+                            <td>글로벌빌리지</td>
+                            <td>051-320-2192</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+    </main>
+  
+    <footer>
+      <p>대학 생활 가이드 &copy; 2023 KwonYongJun SungDoKyum</p>
+    </footer>
+  </body>
+</html>
